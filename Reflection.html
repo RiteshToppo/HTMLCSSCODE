@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/gloss-and-bloom" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+  <style>
+    body {
+      background-color: yellow;
+      display: flex;
+      flex-direction: column;
+      margin-left: 20%;
+      height: 100%;
+      padding-bottom: 258px;
+      margin-top:1%;
+      width: 50%;
+    font-family: 'Michroma', sans-serif;
+    }
+    img{
+      border-radius: 1rem;
+    }
+    .imgbelow {
+      -webkit-box-reflect: below;
+      padding: 1px;
+      float: right;
+      margin-right: 30%;
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .imgabove {
+      -webkit-box-reflect: above;
+      padding: 1px;
+      float: right;
+      margin-right: 30%;
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .imgleft {
+      -webkit-box-reflect: left;
+      padding: 1px;
+      float: right;
+      margin-left: 10%;
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .imgright {
+      -webkit-box-reflect: right;
+      padding: 1px;
+      float: right;
+      margin-right: 30%;
+      width: 20rem;
+      height: 20rem;
+
+    }
+
+    h1 {
+      font-family: 'Michroma', sans-serif;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="margin-left: 1%;margin-bottom: 2%;text-decoration-color: aqua;-moz-text-decoration-line: underline;"><span style="color: mediumslateblue;">CSS</span>  -webkit-box-reflect;</h1>
+
+  <div style="width: 70rem;height: 70rem;display: flex;flex-direction: row;gap: 1rem;">
+    <h1 style="margin-top:10%;float:left;">Reflection is Below</h1>
+    <img class="imgbelow" src="https://i.pinimg.com/736x/04/3d/87/043d87521db03107f3d081830643cff3.jpg" width="170px"
+      height="170px">
+  </div> 
+
+  <div style="width: 70rem;height: 70rem;display: flex;flex-direction: row;gap: 1rem;margin-top: 50%;">
+    <h1 style="margin-top:10%;float:left;">Reflection is Above</h1>
+    <img class="imgabove" src="https://i.pinimg.com/736x/04/3d/87/043d87521db03107f3d081830643cff3.jpg"  width="170px"
+    height="170px">
+  </div> 
+   
+  <div style="width: 70rem;height: 70rem;display: flex;flex-direction: columns ;gap: 1rem;margin-top: 40%;">
+    <img class="imgleft" src="https://i.pinimg.com/736x/04/3d/87/043d87521db03107f3d081830643cff3.jpg" width="170px"
+      height="170px">
+      <h1 style="margin-top:1%;float:left;">Reflection is Left</h1><br><br><br><br><br><br><br><br><br><br>
+  
+    </div>
+    
+
+
+  <div style="width: 70rem;height: 70rem;display: flex;flex-direction: columns ;gap: 1rem;margin-top: 40%;">
+    <h1 style="margin-top:1%;float:left;">Reflection is Right</h1><br><br><br><br><br><br><br><br><br><br>
+    <img class="imgright" src="https://i.pinimg.com/736x/04/3d/87/043d87521db03107f3d081830643cff3.jpg" width="170px"
+      height="170px">
+  </div>  
+
+
+</body>
+
+</html>
