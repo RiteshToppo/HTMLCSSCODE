@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/gloss-and-bloom" rel="stylesheet">
+   
+</head>
+<body>
+    <h1 style="margin-left: 30%;">GRID MINMAX()</h1>
+    <p>for First Div: grid-template-columns: 1fr minmax(5%, 30%) ;</p>
+    <p>for Second Div: grid-template-columns: 1fr minmax(5%, 30%) ;</p>
+    <style>
+        body{
+          display: flex;
+          flex-direction: column;
+          background: linear-gradient(90deg, #FAE5D8 0%, #DFB6B2 100%);
+  
+        }
+        .firstdiv{
+            display: grid;
+            grid-template-rows: 1fr minmax(5%, 30%) ;
+            border: 20x solid black;
+        }
+        .seconddiv{
+            display: grid;
+            grid-template-rows:  minmax(5%, 30%) 1fr ;
+            border: 20x solid black;
+        }
+    </style>
+    <div class="firstdiv">
+        <div style="background:linear-gradient(90deg, #824D69 0%, #522959 100%);color: #DFB6B2; font-family: 'Gloss And Bloom', sans-serif;color: #FAE5D8;">
+                <h1> grid-template-columns: 1fr minmax(5%, 30%) ;</h1>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptate voluptatum veniam soluta nisi omnis cupiditate. Voluptas libero sed officia, quasi, vel numquam ipsa neque suscipit impedit adipisci incidunt fuga!</p> -->
+        </div>
+        <div style="background:linear-gradient(#2A114B 0%, #180018 100%);color: antiquewhite;">
+            <h1>Lorem Optio!</h1>
+        </div>
+    </div>
+    <div class="seconddiv">
+        <div style="background:linear-gradient(90deg, #824D69 0%, #522959 100%);color: #DFB6B2; font-family: 'Gloss And Bloom', sans-serif;color: #FAE5D8;">
+            <!-- <h1>Lorem ipsum dolor !</h1> -->
+        </div>
+        <div style="background:linear-gradient(#2A114B 0%, #180018 100%);color: antiquewhite;">
+            <h1> grid-template-columns: 1fr minmax(5%, 30%) ;</h1>
+        </div>
+    </div>
+    
+</body>
+</html>
