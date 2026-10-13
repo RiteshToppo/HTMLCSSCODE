@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical scroll</title>
+</head>
+<style>
+    --root{
+        --back1 :url("https://i.pinimg.com/736x/04/c4/b3/04c4b3e921c7ffcc80c93895b4588801.jpg");
+        --back2 :url("https://i.pinimg.com/736x/b7/e7/f7/b7e7f726ad987d1b5e356677a8850c3d.jpg");
+        --back3 :url("https://i.pinimg.com/736x/32/79/25/3279253d54390c77f95f2a72ac526893.jpg");
+    }
+    html{
+        height:200%;
+        color: maroon; 
+    }
+     body{
+        background-image: url("https://i.pinimg.com/736x/ed/20/9a/ed209ae555244f308df3194b5538d260.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        display: block;
+        overflow-y: scroll;
+        height: auto;
+        margin-right: 10%;
+        margin-left: 3%;
+        object-fit: cover;
+        padding-right: 10px; 
+       
+    } 
+    
+    li{
+        display: inline;
+        /*display: inline; 
+        - By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
+        float: right;
+        padding: 10px;
+        
+    }
+    .upperlayer{
+        display: flex;
+        flex-direction: column;
+        float: right;
+        width: 100%;
+        margin-top: 30%;
+       
+    }
+    .upperlayer1{
+        display: flex;
+        flex-direction: column;
+        float: right;
+        width: 100%;
+        
+    }
+    upperlayer img{
+        float: right;
+        border: 1px;
+        /* border-color: blue; */
+        border-top-left-radius: 100px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+    upperlayer1 img{
+        float: right;
+        border: 1px;
+        /* border-color: blue; */
+        border-top-left-radius: 100px;
+        border-radius: 10px;
+        z-index: 10;
+    }
+    .firstdiv{
+        float: right;
+        margin-top: 20px;
+        height: 100%;
+        width: 100%;
+        animation: revealing;
+        /* animation: shake; */
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 1%;
+        margin: 0px;
+    }
+    .seconddiv{
+        float: right;
+        margin-top: 100px;
+        height: 33%;
+        width: 100%;
+        animation: revealing;
+        /* animation: shake; */
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 50%;
+        margin: 0px;
+    }
+    .thirddiv{
+        float: right;
+        /* margin-top: 1000px; */
+        height: 33%;
+        width: 100%;
+        animation: revealing;
+     
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 50%;
+        margin: 10px;
+    }
+    p{
+        font: Helvetica;
+        color:black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+  
+    .moverightanimation1{
+        margin: 10px;
+        padding: 10px;
+        animation: moverighttonavigationanim 15s;
+        /* animation: shake; */
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 50%;
+        animation-timeline: view() ;
+
+       
+    }
+    .moverightanimation{  
+        border-radius: 10px;
+        height:200px;
+        width:200px;
+        margin: 10px;
+        padding:30px;
+        animation: moverighttonavigationanim 15s;
+        /* animation: shake; */
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 50%;
+        animation-timeline: view() ;
+        /* box-shadow:  1px 1px 1px blue,10px 10px 10px green; */
+        filter: drop-shadow(0 0 0.75rem crimson);
+        overflow: hidden;
+      
+    }
+
+    .bluranimation{
+        margin-bottom: 25%;
+        margin-left: 10%;
+        animation: bluronavigationanim 15s; 
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 50%;
+        animation-timeline: view() ;   
+    }
+
+    @keyframes revealing {
+        from {
+            color: gray;
+            margin-left: 100vw;
+            filter: blur(50px);
+            opacity: 0.5;
+        }
+        to {
+            margin: 0px;
+            filter: blur(0px);
+            opacity: 1;
+        }
+}
+
+#idshake{
+    animation: shake ; 
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 50%;
+    animation-timeline: view() ;   
+}
+.gridlayoutdiv{
+    margin-left: 40%;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    padding: 1px;
+  
+}
+.grid{
+    border-radius: 50%;
+    padding: 5px;
+    animation: shake ;
+    animation-delay: 30s; 
+    animation-range: cover 0% cover 50%;
+    animation-timeline: view() ;   
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(0px, 10px, 0px);
+  }
+  
+  20%, 80% {
+    transform: translate3d(0px, 20px, 0px);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0px, -40px, 0px);
+  }
+
+  40%, 60% {
+    transform: translate3d(0px, 40px, 0px);
+  }
+}
+
+
+    @keyframes moverighttonavigationanim {
+        from{
+            transform: translateX(3000px);
+        }to{
+           
+            transform: translateX(30px);
+            transform: rotateX(10deg);
+            transform: rotateX(-10deg);
+        } 
+    }
+    ul{
+       
+        background: rgba(254, 0, 0, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: fixed;
+        width: 90%;
+     
+        
+    }
+    ul li{
+        margin-right: 10%;
+        color: brown;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        font-style: italic;
+    }
+
+    @keyframes bluronavigationanim {
+
+     from{
+            filter:blur(5px);
+        }to{
+            filter:blur(0);  
+        } 
+    }
+
+    .moveOpacityanimation{
+         /* animation: moveOpacityanimationnavigationanim cubic-bezier(.15,1.63,.77,-0.51) 7s; */
+        animation: moveOpacityanimationnavigationanim ; 
+        animation-timeline: view(block);
+        animation-range: cover 10%  cover 50%;
+        margin: 0px;
+        animation-timeline: view() ;
+    }
+
+    @keyframes moveOpacityanimationnavigationanim {
+        from{
+            opacity: 0;
+            /* background: var(--back1); */
+            transform: translateY(200px) scale(0);
+        }to{
+            opacity: 1;
+            /* background: var(--back2); */
+            transform: translateY(0) scale(1);
+            
+        }
+       
+    }
+
+  
+.navigationbar {
+    position: fixed; 
+    top: 10px;
+    margin-right: 10%;
+    z-index: 1000;
+   
+  overflow: hidden;
+}
+
+.navigationbar ul {
+  list-style-type: none;
+  overflow: visible;
+  /* background-color: rgb(20, 20, 20); */
+  padding: 0;
+  margin: 0;
+}
+
+.navigationbar li {
+  display: inline-block;
+}
+
+.navigationbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigationbar a:hover, ul li{
+  border-radius: 10px;
+  
+}
+</style>
+<body>
+    <nav class="navigationbar">
+        <ul class="moverightanimation1">
+            <li><a href="dsa">Contact</a>
+            <ul style="opacity: 0;">
+                <li>Array</li>
+                    <li>Linked List</li>
+                    <li>Stack</li>
+                    <li>Queue</li>
+            </ul>
+            </li>
+            <li><a href="dsa">Career</a></li>
+            <li><a href="dsa">About</a></li>
+            <li><a href="dsa">Home</a></li>
+        </ul>
+       
+    </nav>
+   
+    <div class="upperlayer">
+        <h1 style="align-self: center;color: blueviolet;" class="moveOpacityanimation">Scroll Based Animation Example</h1>
+        <div class="firstdiv" >
+            <img id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/1d/e1/14/1de11458714f1fd86a6bb1d32045e793.jpg"  style="float:right;"/>
+            <p class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+             </div>
+        <div class="seconddiv">
+            <img id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/a1/c5/dd/a1c5dd662f2e0f0568b025001df94e76.jpg" style="float:left;"/>
+            <p  class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+        </p>
+           
+        </div>
+        <div class="thirddiv">
+            <img  id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/a0/99/8e/a0998ed48e3891637c6ea76052380e27.jpg"  style="float:right;"/>     
+            <p  class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+        </p>
+        </div>
+    <div class="gridlayoutdiv">
+        <div class="grid">
+            
+            <img  src="https://i.pinimg.com/736x/22/ed/f5/22edf50f9920926c0a7e8364748b7905.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/78/5f/4d/785f4d1875ceb5f6cea94978840306d3.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/c8/f4/48/c8f44893ddcfc5aa6a4af07eaff247e4.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/ae/69/5a/ae695a064b701fa5950e744449f7d08b.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/92/aa/7f/92aa7ffb7ce7ad6dedb8d9486b134fc1.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/22/ed/f5/22edf50f9920926c0a7e8364748b7905.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/c6/34/98/c63498b7d4a35e002dc95bca819cba53.jpg" height="100%" width="100%">
+        </div>
+
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/b2/d2/f6/b2d2f6e0eb78b2438339968bcf7fcef5.jpg" height="100%" width="100%">
+        </div>
+        <div class="grid">
+            
+            <img src="https://i.pinimg.com/736x/c4/cd/8e/c4cd8e2f22ba9a6ea81e5924b2f27922.jpg" height="100%" width="100%">
+        </div>
+    </div>
+    </div>
+    <div class="upperlayer1">
+        <div class="firstdiv" >
+            <img id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/9e/24/c9/9e24c91c375ec3171abadecbed3fec21.jpg"  style="float:left;"/>
+            <p  class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+        </p></div>
+        <div class="seconddiv">
+            <img id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/62/b0/87/62b0870b892ac444901707529a1655ac.jpg" style="float:right;"/>
+            <p  class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+        </p>
+        </div>
+        <div class="thirddiv">
+            <img id ="idshake" class="moverightanimation" src="https://i.pinimg.com/736x/dd/72/1d/dd721d4fc745c807855bf381f16c9044.jpg"  style="float:left;"/>     
+            <p  class="bluranimation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ullam minima, corporis aliquam accusantium quaerat expedita praesentium iusto perspiciatis, reprehenderit quibusdam dolores earum sint? Laudantium odio ab vitae? Molestias, itaque!</p>
+        </p></div>
+     
+    </div>
+   
+</body>
+</html>
