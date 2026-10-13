@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+    background-color:#CFC3AE;
+  }
+      .a, .b, .e, .f{
+  width: 100px;
+  height: 100px;
+  background: #968467;
+  margin: 25px;
+}
+
+.a:hover,
+.a:hover+ *+*
+{
+  background: pink;
+}
+
+div :has(+ *:hover){
+  background: #110F0A;
+}
+ 
+.f:hover
+{
+  background: #110F0A;
+}
+
+
+ .b:hover,
+.b:hover + * + *
+{
+  background: #110F0A;
+} 
+    </style>
+    <h1 style="margin-left: 20%;">:hover+ *+* Example</h1>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="e"></div>
+    <div class="f"></div>
+</body>
+<script src="./script.js"></script>
+</html>

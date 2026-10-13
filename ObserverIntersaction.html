@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #eb285d;
+        }
+        .card-container{
+            display: flex;
+            flex-direction: column;
+            gap:1 rem;
+            align-items: flex-start;
+        }
+        .card{
+            background: white;
+            border: 1px solid black;
+            border-radius: .25 rem;
+            padding: .5rem;
+            opacity: 0;
+            animation: animation 3s linear;
+        }
+        @keyframes animation {
+            0%{
+                transform: translateX(1000px);
+            }50%{
+                transform: translateX(500px);
+            }90%{
+                transform: translateX(-100px);
+            }92%{
+                transform: translateX(50px);
+            }9%{
+                transform: translateX(0px);
+            }
+            95%{
+                transform: translateX(-25px);
+            }
+
+            96%{
+                transform: translateX(20px);
+            }
+
+            98%{
+                transform: translateX(-10px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        .card.show{
+            opacity: 1;
+            transform: translateX(0);
+            animation: animation 3s linear;
+            animation-delay: 6000s;
+            
+        }
+    </style>
+    <h1>Observer Interaction</h1>
+    <div class="card-container">
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+        <div class="card"><img src="https://i.pinimg.com/736x/4d/c7/b3/4dc7b33a018c001e6be5afee0ab7fc63.jpg" width="100px" height="100px"></div>
+      
+
+    </div>
+    <script>
+        const cards = document.querySelectorAll(".card")
+       
+        const observer = new IntersectionObserver(entries=>{
+            entries.forEach(entry => {
+                entry.target.classList.toggle("show",entry.isIntersecting)
+                // if(entry.isIntersecting)
+                //     observer.unobserve(entry.target);
+            })
+           
+        },{
+            // threshold:1,
+            // root:
+            rootMargin:"-100px",
+        }
+    
+    );
+    // const observer2 = new IntersectionObserver(entries=>{
+    //         entries.forEach(entry => {
+    //             entry.target.classList.toggle("show",entry.isIntersecting)
+    //             if(entry.isIntersecting)
+    //                 observer.unobserve(entry.target);
+    //         })
+           
+    //     },{
+    //         // threshold:1,
+    //         // root:
+    //         rootMargin:"-100px",
+    //     }
+    
+    // );
+
+    // cards.forEach(card=>
+    //     observer2.observe(card)
+    // )
+        cards.forEach(card=>{
+            observer.observe(card)
+        })
+    </script>
+</body>
+</html>
