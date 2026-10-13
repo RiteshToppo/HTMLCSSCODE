@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/gloss-and-bloom" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("https://i.pinimg.com/474x/c2/f0/97/c2f0975cc0cb2985e359abce2461e986.jpg"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: wipe-out-right 15s infinite ;
+        }
+        @keyframes wipe-out-right {
+            from {
+                background-image: url("https://i.pinimg.com/474x/c2/f0/97/c2f0975cc0cb2985e359abce2461e986.jpg");
+                clip-path: inset(0 0 0 0);
+                /* <h1 style="font-size: xx-large;  font-family: 'Gloss And Bloom', sans-serif;; color: black;margin: 20%;">Changing Background</h1> */
+            }
+            to {
+                background-image: url(https://i.pinimg.com/736x/6a/38/75/6a3875ff7cd5b15f306870bffa13a86e.jpg);
+           
+                clip-path: inset(0 0 0 100%);
+                /* <h1 style="font-size: xx-large;  font-family: 'Gloss And Bloom', sans-serif;; color: black;margin: 20%;">Change Background</h1> */
+            }
+            }
+
+            [transition-style="out:wipe:right"] {
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-out-right both;
+            }
+    </style>
+    <h1 style="font-size: xx-large;  font-family: 'Gloss And Bloom', sans-serif;; color: black;margin: 20%;">Changing Background</h1>
+</body>
+</html>

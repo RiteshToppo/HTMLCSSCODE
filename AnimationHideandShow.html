@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/azonix" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body{
+            background-color: yellow;
+            margin-top: 30%;
+            margin-left: 10%;
+            font-family: 'Azonix', sans-serif;
+            font-size: xx-large;
+        }
+        span{
+           opacity: 0;
+            animation: animationshow 10s infinite linear;
+        }
+        span:nth-child(0){
+            animation-delay: 1s;
+        }
+        span:nth-child(1){
+            animation-delay: 2s;
+        }
+        span:nth-child(2){
+            animation-delay: 4s;
+        }
+        span:nth-child(3){
+            animation-delay: 6s;
+        }
+        span:nth-child(4){
+            animation-delay: 0s;
+        }
+        span:nth-child(5){
+            animation-delay: 2s;
+        }
+        span:nth-child(6){
+            animation-delay: 4s;
+        }
+        span:nth-child(7){
+            animation-delay: 6s;
+        }
+        span:nth-child(8){
+            animation-delay: 8s;
+        }
+        span:nth-child(9){
+            animation-delay: 10s;
+        }
+        span:nth-child(10){
+            animation-delay: 12s;
+        }
+        span:nth-child(11){
+            animation-delay: 14s;
+        }
+        span:nth-child(12){
+            animation-delay: 16s;
+        }
+        span:nth-child(13){
+            animation-delay: 18s;
+        }
+        span:nth-child(14){
+            animation-delay: 20s;
+        }
+       
+        @keyframes animationshow {
+            0%{
+                opacity: 1;
+                transform: translateX(10px);
+            }
+            10%{
+                opacity: 0.6;
+                transform: translateX(20px);
+            }
+            20%{
+                opacity: 0.3;
+                transform: translateX(40px);
+            }
+            40%{
+                opacity: 0.6;
+                transform: translateX(80px);
+            }
+            50%{
+                opacity: 1;
+                transform: translateX(120px);
+            }
+            80%{
+                opacity: 0.8;
+                transform: translateX(180px);
+            }
+            90%{
+                opacity: 0.6;
+                transform: translateX(200px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(240px);
+            }
+        }
+    </style>
+    <span>M</span>
+    <span>A</span>
+    <span>S</span>
+    <span>T</span>
+    <span>E</span>
+    <span>R</span>
+    <span>C</span>
+    <span>L</span>
+    <span>A</span>
+    <span>S</span>
+    <span>S</span>
+    <span>C</span>
+    <span>A</span>
+    <span>F</span>
+    <span>E</span>
+</body>
+</html>
