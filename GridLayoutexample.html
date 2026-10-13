@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID LAYOUT</title>
+</head>
+<body>
+    <style>
+        body{
+            display: block;
+            background-color: #878B87;
+            overflow:hidden;
+        }
+        .grid{
+            background-size: cover;
+            object-fit: contain;
+            background-image: url("https://i.pinimg.com/736x/bb/84/cf/bb84cfbbde2d3dfefd859f740bc6decb.jpg");
+            background-size: contain;
+            background-attachment: fixed;
+           
+        }
+        .maindiv{
+            margin-top:5%;
+            display: grid;
+            grid-template-rows: 500px 500px 500px 500px 500px 500px ;
+            grid-template-columns: 200px 200px 200px 200px 200px 200px ;
+            grid-row-gap: 100px;
+            grid-column-gap: 10px;
+           
+        }
+        .grid:nth-child(even){
+            height: 600px;
+            z-index: 100;
+            padding-top: 1px;
+            
+        }
+
+        .grid:nth-child(odd){
+            height: 400px;
+            z-index: 10;
+            margin-top: 50px;
+        }
+        .logo1{
+            top: 40%;
+            left: 10%;
+            position: fixed;
+            z-index: 3000;
+            /* mix-blend-mode: difference; */
+            color: #682009;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .logo2{
+            top: 80%;
+            left: 10%;
+            position: fixed;
+            z-index: 3000;
+            /* mix-blend-mode: difference; */
+            color: #fff;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    </style>
+    <h1 style="margin-left: 30%; margin-top: 3%;">GRID LAYOUT EXAMPLE</h1>
+    
+    
+    <div class="maindiv">
+       
+        <h1 class="logo1">NEW SEASON NEW LOOK
+            <br>
+            FASHION ARE OUT
+        </h1>
+        <div class="grid">
+           
+        </div>
+        <div class="grid">
+    
+        </div>
+        <div class="grid">
+    
+        </div>
+       
+        <div class="grid">
+    
+        </div>
+       
+        <div class="grid">
+    
+        </div>
+        <div class="grid">
+    
+        </div>
+       
+    </div>
+   
+   
+    <div>
+        <h1 class="logo2">New Collection <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam veniam quis numquam accusantium accusamus nam blanditiis fuga provident impedit? Quo corrupti, labore facere deserunt deleniti enim exercitationem accusantium provident tempora.
+        </h1>
+        
+    </div>
+    
+</body>
+</html>

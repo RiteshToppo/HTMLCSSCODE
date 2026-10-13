@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        :root {
+            --img-1: url('https://i.pinimg.com/736x/07/71/aa/0771aa1f8e0ef7337559645353dcc770.jpg');
+            --img-2: url('https://i.pinimg.com/736x/eb/67/d6/eb67d63527852424a9dea5862f3722f0.jpg');
+            --img-3: url('https://i.pinimg.com/736x/73/bc/2c/73bc2cc34b8b74e4b8c985e9938d9a37.jpg');
+            --opacityval-1:0;
+            --opacityval-2:0.5;
+            --opacityval-3:1;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 200px  200px 200px   200px  200px 200px;
+            grid-template-rows:  200px  200px  200px 200px   200px  200px 200px 200px 200px; 
+            grid-gap: 10px;
+            overflow:hidden;
+            height: 1000px;
+            background-color: linear-gradient(to right, #cc2b5e,#753a88);
+
+        }
+        .gridcell{
+            border-radius: 10px;
+            
+            background-size: cover;
+            object-fit: cover;
+            /* background-image: url("./newImage.jpeg"); */
+            background-size: calc(62%);
+            background-attachment: fixed;
+            
+            opacity: 1;
+            animation: background 5s 150ms infinite ease-in-out;
+            /* -webkit-animation: fadeInFromNone 0.5s ease-out; */
+        }
+        .gridcellopacity{
+           opacity: 0;
+        }
+        .logo1{
+            top: 40%;
+            left: 10%;
+            position: fixed;
+            z-index: 3000;
+            /* mix-blend-mode: difference; */
+            color: white;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .logo2{
+            top: 40%;
+            left: 80%;
+            position: fixed;
+            z-index: 3000;
+            /* mix-blend-mode: difference; */
+            color: white;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+/*  */
+        @keyframes background {
+            0% { 
+                background-image: var(--img-1); 
+                opacity: 0;
+                
+            }
+            30% { 
+                background-image: var(--img-1); 
+                opacity: 0.5;
+            }
+            33% {
+                 background-image: var(--img-2);
+                 opacity: 0;
+                 }
+            63% { 
+                background-image: var(--img-2); 
+                opacity: 0.5;
+            }
+            66% { 
+                background-image: var(--img-3); 
+                opacity: 0;
+            }
+            96% {
+                 background-image: var(--img-3); 
+                 opacity: 0.5;
+                }
+            100% { 
+                background-image: var(--img-1);
+                opacity: 1;
+             }
+}
+    </style>
+    <h1 class="logo1">CUSTOMIZED GRID EXAMPLE</h1>
+    <h1 class="logo2">PHOTOGRPAHY </h1>
+    <div class="gridcell">
+       
+    </div>
+    <div class="gridcell">
+       
+    </div>
+    <div class="gridcell">
+       
+    </div>
+    <div class="gridcell">
+        
+    </div>
+    <div class="gridcell gridcellopacity">
+
+    </div>
+    <div class="gridcell gridcellopacity">
+
+    </div>
+    <div class="gridcell">
+       
+    </div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell"></div>
+    <div class="gridcell gridcellopacity"></div>
+    <div class="gridcell gridcellopacity"></div>
+
+</body>
+</html>

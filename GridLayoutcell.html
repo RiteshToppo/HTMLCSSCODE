@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<style>
+    body{
+        background-image: url("https://i.pinimg.com/736x/e6/e6/66/e6e666b4803c6c8cf2894c846f5ce1ca.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-area: auto;   
+    }
+
+    .gridconter{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-items: start;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: space-between;
+        grid-row-gap: 120px;
+        
+    }
+    .gridcell{
+        border-color: aqua;
+        border-style: dotted;
+        padding: 20px;
+    }
+
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: orange;
+       
+    }
+
+    .item2{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: blue;
+        
+       
+    }
+</style>
+<body>
+    <div class="gridconter">
+        <div class="gridcell">GRID CELL 1</div>
+        <div class="gridcell" >GRID CELL 2</div>
+        <div class="gridcell">GRID CELL 3</div>
+        <div class="gridcell">GRID CELL 4</div>
+        <div class="gridcell">GRID CELL 5</div>
+        <div class="gridcell">GRID CELL 6</div>
+        <div class="gridcell">GRID CELL 7</div>
+        <div  class="gridcell">GRID CELL 8</div>
+        <div class="gridcell">GRID CELL 9</div>
+        <div class="gridcell">GRID CELL 10</div>
+       
+</body>
+</html>
