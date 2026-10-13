@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/gloss-and-bloom" rel="stylesheet">
+   
+    <title>Document</title>
+</head>
+<body>
+    <h4 style="margin-left: 30%;">Mix mix-blend-mode</h4>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+             background: #01565b;
+             font-family: 'Gloss And Bloom', sans-serif;
+             color: #FAE5D8;
+          
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin: 1rem;
+            flex-wrap: wrap;
+        }
+        .cards{
+            margin: 1rem;
+            padding: 0.5rem;
+            min-width: 10rem;
+            max-height: 10rem;
+        }
+        .cards img{
+            min-width: 10rem;
+            max-height: 10rem;
+            border-radius: 1rem;
+        }
+        .cards .img_mix_blend_color{
+            
+            mix-blend-mode:color;
+        }
+
+        .cards .img_mix_blend_color_burn{
+            
+            mix-blend-mode:color-burn;
+        }
+
+        .cards .img_mix_blend_color_dodge{
+            
+            mix-blend-mode:color-dodge;
+        }
+
+        .cards .img_mix_blend_darken{
+            
+            mix-blend-mode:darken;
+        }
+
+        .cards .img_mix_blend_exclusion{
+            
+            mix-blend-mode:exclusion;
+        }
+
+        .cards .img_mix_blend_difference{
+            
+            mix-blend-mode:difference;
+        }
+
+
+        .cards .img_mix_blend_hard_light{
+            
+            mix-blend-mode:hard-light;
+        }
+
+        .cards .img_mix_blend_hue{
+            
+            mix-blend-mode:hue;
+        }
+
+        .cards .img_mix_blend_lighten{
+            
+            mix-blend-mode:lighten;
+        }
+
+        .cards .img_mix_blend_luminosity{
+            
+            mix-blend-mode:luminosity;
+        }
+
+        .cards .img_mix_blend_multiply{
+            
+            mix-blend-mode:multiply;
+        }
+        .cards .img_mix_blend_normal{
+            mix-blend-mode:normal;
+        }
+        h4{
+
+        }
+    </style>
+    <div class="container">
+        <div class="cards">
+            <img src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>Original</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_color" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: color</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_color_burn" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6> mix-blend-mode: color-burn</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_color_dodge" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: color-dodge;</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_darken" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: darken;</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_difference" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6> mix-blend-mode: difference;</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_exclusion" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6> mix-blend-mode: exclusion;</h6>
+        </div>
+        <div class="cards">
+            <img class="img_mix_blend_hard_light" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: hard-light;</h6>
+        </div>
+
+        <div class="cards">
+            <img class="img_mix_blend_hue" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6> mix-blend-mode: hue;</h6>
+        </div>
+
+        <div class="cards">
+            <img class="img_mix_blend_lighten" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: lighten;</h6>
+        </div>
+
+
+        <div class="cards">
+            <img class="img_mix_blend_luminosity" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: luminosity;</h6>
+        </div>
+
+        <div class="cards">
+            <img class="img_mix_blend_multiply" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: multiply;</h6>
+        </div>
+
+        <div class="cards">
+            <img class="img_mix_blend_normal" src="https://i.pinimg.com/736x/7e/ff/73/7eff736147717cc30c78f56e26aa0d9b.jpg">
+            <h6>mix-blend-mode: normal;</h6>
+        </div>
+
+    </div>
+</body>
+</html>
