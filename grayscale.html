@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 style="margin-left: 30%;color: #EAE0C7;margin-bottom: 10%;">RotateY Example</h1>
+
+    <style>
+        .maindiv{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20%;
+           
+        }
+        body{
+            display: block;
+            margin-left: 20%;
+            background-color: #9CB8B7; 
+        }
+
+        img{
+            border-radius: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            
+        }
+        @keyframes rotBGimg {
+            0%{
+                transform: rotateY(40deg);
+               
+            }
+            to
+            {
+                transform: rotateY(360deg);
+            }
+        }
+        img:hover{
+            animation: rotBGimg 10s linear infinite;
+          
+        }
+    </style>
+    <img src="https://i.pinimg.com/736x/79/ed/c1/79edc1eab62039984d3b74b97ec4b5b6.jpg" height="400px" width="100px" margin="10px">
+    <img src="https://i.pinimg.com/736x/f1/20/ce/f120ce9c733f5264865fb6f3543681f0.jpg" height="400px" width="100px" margin="10px">
+    <img src="https://i.pinimg.com/736x/2e/cf/75/2ecf751c0cea6b172593eaf7799249b1.jpg" height="400px" width="100px" margin="10px">
+    <img src="https://i.pinimg.com/736x/0b/7b/f7/0b7bf7c1f76f8ac76c241d033e53f964.jpg" height="400px" width="100px" margin="10px">
+    <img src="https://i.pinimg.com/736x/a3/e7/8d/a3e78d03430c7d1deae01756dbc24a37.jpg" height="400px" width="100px" margin="10px">
+    <img src="https://i.pinimg.com/736x/7a/da/08/7ada08a5e7c34b9317ef9c15de6dd70f.jpg" height="400px" width="100px" margin="10px">
+</body>
+</html>
