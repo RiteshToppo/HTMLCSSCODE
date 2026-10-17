@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: block;
+            background: rgb(27,101,114);
+            background: linear-gradient(90deg, rgba(27,101,114,1) 0%, rgba(185,239,255,1) 100%);
+            margin-bottom: 30%;
+        }
+        .containerDiv{
+            visibility: hidden;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            animation: scrollanimationexample ; 
+            animation-timeline: view(block);
+            animation-range: cover 0% cover 90%;
+            animation-timeline: view() ; 
+        }
+        .show{
+            filter:blur(5px);
+            /* width: 1000px;
+            height: 1000px; */
+            /* animation: strightanimationexample  ; 
+                animation-timeline: view(block);
+                animation-range: cover 0% cover 99%;
+                animation-timeline: view() ;  */
+        }
+        .notshow{
+            opacity: 0;
+        }
+         #scrolldiv{
+            animation: scrollanimationexample ; 
+                animation-timeline: view(block);
+                animation-range: cover 20% cover 90%;
+                animation-timeline: view() ; 
+        } 
+        .maindiv{
+            display: flex;
+            flex-direction: row;
+           
+            margin-top: 15%;
+            margin-left: 25%;
+           
+              
+        }
+        .cube{
+            /* --k: 1; */
+            --j: calc(1 - var(--k));
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            /* clip-path: inset(37.5vh var(--dr) 37.5vh 37.5vh);
+  transition-property: clip-path, padding;
+  transition-timing-function: cubic-bezier(0.32, 1, 0.68, 1), cubic-bezier(0.65, 0, 0.35, 1);
+             */
+            animation: makeimagevisible ; 
+                animation-timeline: view(block);
+                animation-range: cover 10% cover 99.99%;
+                animation-timeline: view() ; 
+        }
+        .cube:hover  {
+            transform: scaleX(2);
+        }
+      
+        .cube:nth-child(2n+1) {
+            filter: grayscale(1) brightness(0.9);
+        }
+        .cube:nth-child(2n) {
+            filter: grayscale(0) brightness(1);
+        }
+        .block{
+            transform: rotateZ(-20deg);
+            animation: strightanimationexample ; 
+                animation-timeline: view(block);
+                animation-range: cover 0% cover 90%;
+                animation-timeline: view() ; 
+        }
+
+        @keyframes strightanimationexample {
+           from{
+            transform: rotateZ(-20deg);
+           
+           } to{
+            transform: rotateZ(1deg);
+          
+           } 
+        }
+
+        @keyframes square-in-hesitate {
+                0% {
+                    clip-path: inset(100% 100% 100% 100%);
+                }
+                40% {
+                    clip-path: inset(33% 33% 33% 33%);
+                }
+                100% {
+                    clip-path: inset(0 0 0 0);
+                }
+                }
+
+                [transition-style="in:square:hesitate"] {
+                animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+}
+
+@keyframes circle-out-hesitate {
+  0% {
+    clip-path: circle(125%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-hesitate both;
+}
+
+        @keyframes makeimagevisible {
+            0% {
+                clip-path: circle(125%);
+            }
+            40% {
+                clip-path: circle(40%);
+            }
+            100% {
+                clip-path: circle(0%);
+            }
+}
+
+[transition-style="out:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-hesitate both;
+        }
+
+        @keyframes scrollanimationexample { 
+            from {
+                clip-path: inset(0 100% 0 0);
+            }
+            to {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        [transition-style="in:wipe:right"] {
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+            }
+    
+       
+    </style>
+    <!-- <script>
+        var myDiv = document.getElementsByTagName('body');
+        
+  
+    </script> -->
+    <div class="containerDiv" >
+       <img src="./bgremoved.png">
+       <h1>SCROLL EXAMPLE</h1>
+    </div>
+    <h1 style="margin-left: 30%; color:aqua;font-family:Apple Chancery, cursive">Vacation Home Page</h1>
+    <div class="maindiv">
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/e3/43/27/e34327c58ba7280ca9d60f040f3c1385.jpg" height="100px" width="100px"></div>
+            <div class="cube"  id="scrolldiv"><img src="https://i.pinimg.com/736x/ad/c9/8c/adc98ca4f83b70bed7e0ab3140f5ea22.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/d9/25/1d/d9251d91c56d95c132eb8dd085ed6277.jpg" height="100px" width="100px"></div>
+        </div>
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/3c/b0/35/3cb0357a7d16d0903d362a3e3f8434fa.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/27/c0/90/27c090008ca382c4e35e6e5b9716284c.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/1a/69/40/1a69403ef8722efbe760bb6be2299918.jpg" height="100px" width="100px"></div>
+        </div>
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/2c/4e/7b/2c4e7b076fd460e8219dc5c746836e05.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/8f/ba/cb/8fbacbec6a35260345c02967cc3a029e.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/69/b7/c6/69b7c6ff67135bf45db9d5e09318a75b.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/b4/df/bc/b4dfbc2afd8f73ec3d09af3b7f5474c2.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/50/0b/42/500b42a0c1e4a3537b58bfb1572566c2.jpg" height="100px" width="100px"></div>
+        </div>
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/1e/f7/02/1ef702be511fcb491ad48ed35247510e.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/09/3f/39/093f39b88fad180ea3817ef9bd0f3e7e.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/ad/81/1a/ad811ae8686d068ddb84e58b557d9942.jpg" height="100px" width="100px"></div>
+        </div>
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/c5/ba/33/c5ba33529a3e26e4cb4143aba9de0956.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/4b/1d/e3/4b1de306121bbd4a4866d02a4c65e690.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/bc/d6/54/bcd6540518a1e5acb2bf8b5236e42d32.jpg" height="100px" width="100px"></div>
+        </div>
+        <div class="block">
+            <div class="cube"><img src="https://i.pinimg.com/736x/a6/65/bb/a665bb3f4a2144cd2469463323bde241.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/c4/da/a3/c4daa310cdba2d0e68b33c8e4d2dcde4.jpg" height="100px" width="100px"></div>
+            <div class="cube"><img src="https://i.pinimg.com/736x/71/cf/8a/71cf8a47ef0ac6933e4b5b92cbfda029.jpg" height="100px" width="100px"></div>
+        </div>
+    </div>
+   
+</body>
+</html>
